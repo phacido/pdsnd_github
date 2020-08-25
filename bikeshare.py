@@ -207,15 +207,21 @@ def show_trip_info(df):
 
 
 def main():
+    # the while statemente functions as a way to keep asking for the user's
+    # input until they explicitly indicate to stop repeating
     while True:
+        # get user input
         city, month, day = get_filters()
+        # load and pre process the data
         df = load_data(city, month, day)
+        # display statistics
         time_stats(df)
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)        
         show_trip_info(df)
-        
+
+        # ask if user wants to restart 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
            break
