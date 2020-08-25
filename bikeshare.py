@@ -89,6 +89,7 @@ def load_data(city, month, day):
     return df
 
 def time_stats(df):
+    # df: a pandas dataframe containing the data
     """Displays statistics on the most frequent times of travel."""
 
     print('\nCalculating The Most Frequent Times of Travel...\n')
@@ -108,6 +109,7 @@ def time_stats(df):
     
 
 def station_stats(df):
+    # df: a pandas dataframe containing the data
     """Displays statistics on the most popular stations and trip."""
 
     print('\nCalculating The Most Popular Stations and Trip...\n')
@@ -128,6 +130,7 @@ def station_stats(df):
 
 
 def trip_duration_stats(df):
+    # df: a pandas dataframe containing the data
     """Displays statistics on the total and average trip duration."""
     
     print('\nCalculating Trip Duration...\n')
@@ -145,6 +148,7 @@ def trip_duration_stats(df):
 
 
 def user_stats(df):
+    # df: a pandas dataframe containing the data
     """Displays statistics on bikeshare users."""
 
     print('\nCalculating User Stats...\n')
@@ -205,15 +209,21 @@ def show_trip_info(df):
 
 
 def main():
+    # the while statemente functions as a way to keep asking for the user's
+    # input until they explicitly indicate to stop repeating
     while True:
+        # get user input
         city, month, day = get_filters()
+        # load and pre process the data
         df = load_data(city, month, day)
+        # display statistics
         time_stats(df)
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)        
         show_trip_info(df)
-        
+
+        # ask if user wants to restart 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
            break
