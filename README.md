@@ -1,15 +1,12 @@
 ### Date created
-Include the date you created this project and README file.
+Project repository was created on github on 25, August 2020.
 
-### Project Title
-Replace the Project Title
+### Udacity Project 2
 
 ### Description
-Describe what your project is about and what it does
-
+This project has the goal to allow the user to see statistics for bike trips in three different cities.
 ### Files used
-Include the files used
-
+bike_share.py
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+Project template from:
+https://github.com/udacity/pdsnd_github
