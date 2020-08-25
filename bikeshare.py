@@ -187,7 +187,7 @@ def show_trip_info(df):
     
     # asks if the user ones to see individual trip info
     # if not a valid answer keeps asking
-    show_info = input('would you like to see individual trip information?:')
+    show_info = input('would you like to see individual trip information?: ')
     while (show_info!='yes') & (show_info!='no'):
         show_info = input('would you like to see individual trip information?:')
         
